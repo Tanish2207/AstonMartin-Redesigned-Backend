@@ -7,7 +7,10 @@ module.exports = initRoutes = (app) => {
 
 	app.get('/dealers', dealerController.get)
 	app.post('/users', userController.post)
+	app.get("/", (req, res) => {
+		res.send("Server up and running!!")
+	});
 
-    
+
 	debug('Finished initializing routes...')
 }
